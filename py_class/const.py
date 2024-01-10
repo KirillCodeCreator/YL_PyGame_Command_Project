@@ -1,15 +1,27 @@
 import pygame
 
-list_consts = []
-
 
 class ReadConstants:
-    try:
-        with open('data/const.txt', "r") as file:
-            for line in file:
-                list_consts.append(line)
-    except FileNotFoundError:
-        print('Файл не найден')
+    list_consts = []
+
+    def __init__(self):
+        try:
+            with open('..\\data\\const1.txt', "r") as file:
+                for line in file:
+                    self.list_consts.append(line)
+        except FileNotFoundError:
+            self.set_default_values()
+            print('Файл const.txt не найден')
+
+    def set_default_values(self):
+        self.list_consts.append('1200')
+        self.list_consts.append('800')
+
+    def read_width(self) -> int:
+        return int(self.list_consts[0])
+
+    def read_height(self) -> int:
+        return int(self.list_consts[1])
 
 
 class Constants:
@@ -23,6 +35,7 @@ class Constants:
     FPS = 60
 
     def __init__(self):
+        self.const_reader = ReadConstants()
         self.set_width()
         self.set_height()
         self.set_white()
@@ -33,13 +46,13 @@ class Constants:
 
     # размеры экрана:
     def set_width(self):
-        self.width = int(list_consts[0])
+        self.width = self.const_reader.read_width()
 
     def get_width(self):
         return self.width
 
     def set_height(self):
-        self.height = int(list_consts[1])
+        self.height = self.const_reader.read_height()
 
     def get_height(self):
         return self.height
