@@ -2,13 +2,11 @@ import sys
 
 import pygame
 
+from py_class.backgrounds import GameBackgrounds
 from py_class.buttons_in_menu import Button
 from py_class.font import font_for_menu, font_for_buttons_text
 from py_class.font import font_for_buttons
 from py_class.const import SCREEN
-from py_class.const import BACKGROUND_MENU
-from py_class.const import BACKGROUND_ABOUT_US
-from py_class.const import BACKGROUND_LEVELS
 
 pygame.init()
 pygame.display.set_caption("К ЗВЁЗДАМ!")
@@ -16,9 +14,10 @@ pygame.display.set_caption("К ЗВЁЗДАМ!")
 
 def choice_level():
     flag = True
+    backgrounds = GameBackgrounds()
     while flag:
         LEVEL_MOUSE_POS = pygame.mouse.get_pos()
-        SCREEN.blit(BACKGROUND_LEVELS, (0, 0))
+        SCREEN.blit(backgrounds.get_background_levels(), (0, 0))
 
         EXIT_TEXT = font_for_menu(55).render(
             "Выберите, какой уровень вы хотите пройти?", True, "White"
@@ -73,12 +72,13 @@ def choice_level():
 
 def about_us():
     flag = True
+    backgrounds = GameBackgrounds()
     pygame.mixer.music.load("sounds/music_about_us.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
     while flag:
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
 
-        SCREEN.blit(BACKGROUND_ABOUT_US, (0, 0))
+        SCREEN.blit(backgrounds.get_background_about_us(), (0, 0))
 
         OPTIONS_TEXT = font_for_menu(65).render("Информация", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(640, 200))
@@ -161,11 +161,12 @@ def exit_function():
 
 
 def main_menu():
+    backgrounds = GameBackgrounds()
     flag = True
     pygame.mixer.music.load("sounds/mucis_for_menu.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
     while flag:
-        SCREEN.blit(BACKGROUND_MENU, (0, 0))
+        SCREEN.blit(backgrounds.get_background_menu(), (0, 0))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 

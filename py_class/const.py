@@ -1,7 +1,7 @@
 import pygame
 
 
-class ReadConstants:
+class ConstantsReader:
     list_consts = []
 
     def __init__(self):
@@ -35,7 +35,7 @@ class Constants:
     FPS = 60
 
     def __init__(self):
-        self.const_reader = ReadConstants()
+        self.const_reader = ConstantsReader()
         self.set_width()
         self.set_height()
         self.set_white()
@@ -92,6 +92,3 @@ class Constants:
 # иные:
 const = Constants()
 SCREEN = pygame.display.set_mode((const.get_width(), const.get_height()))
-BACKGROUND_MENU = pygame.image.load("images/background.jpg")
-BACKGROUND_ABOUT_US = pygame.image.load("images/about_as.jpg")
-BACKGROUND_LEVELS = pygame.image.load("images/level.jpg")
