@@ -6,16 +6,15 @@ from py_class.backgrounds import GameBackgrounds
 from py_class.buttons_in_menu import Button
 from py_class.font import font_for_menu, font_for_buttons_text
 from py_class.font import font_for_buttons
-from py_class.const import SCREEN
 
-pygame.init()
-pygame.display.set_caption("К ЗВЁЗДАМ!")
+#pygame.init()
+#pygame.display.set_caption("К ЗВЁЗДАМ!")
 
 
 def choice_level():
     flag = True
     backgrounds = GameBackgrounds()
-    while flag:
+    '''while flag:
         LEVEL_MOUSE_POS = pygame.mouse.get_pos()
         SCREEN.blit(backgrounds.get_background_levels(), (0, 0))
 
@@ -67,7 +66,7 @@ def choice_level():
                     main_menu()
                 if LEVEL_BACK.checkForInput(LEVEL_MOUSE_POS):
                     main_menu()
-        pygame.display.update()
+        pygame.display.update()'''
 
 
 def about_us():
@@ -75,7 +74,7 @@ def about_us():
     backgrounds = GameBackgrounds()
     pygame.mixer.music.load("sounds/music_about_us.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
-    while flag:
+    '''while flag:
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
 
         SCREEN.blit(backgrounds.get_background_about_us(), (0, 0))
@@ -104,14 +103,14 @@ def about_us():
                 if OPTIONS_PLAY.checkForInput(OPTIONS_MOUSE_POS):
                     main_menu()
 
-        pygame.display.update()
+        pygame.display.update()'''
 
 
 def exit_function():
     flag = True
     pygame.mixer.music.load("sounds/music_exit.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
-    while flag:
+    '''while flag:
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
 
         SCREEN.fill("black")
@@ -157,7 +156,7 @@ def exit_function():
                 if EXIT_NO.checkForInput(OPTIONS_MOUSE_POS):
                     main_menu()
 
-        pygame.display.update()
+        pygame.display.update()'''
 
 
 def main_menu():
@@ -165,7 +164,7 @@ def main_menu():
     flag = True
     pygame.mixer.music.load("sounds/mucis_for_menu.mp3")
     pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
-    while flag:
+    '''while flag:
         SCREEN.blit(backgrounds.get_background_menu(), (0, 0))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
@@ -220,4 +219,4 @@ def main_menu():
 
         pygame.display.update()
         programIcon = pygame.image.load("images/icon.png")
-        pygame.display.set_icon(programIcon)
+        pygame.display.set_icon(programIcon)'''

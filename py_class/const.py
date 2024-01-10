@@ -34,6 +34,12 @@ class Constants:
     yellow = 0
     FPS = 60
 
+    main_screen_name = 'main'
+    levels_screen_name = 'levels'
+    study_screen_name = 'study'
+    last_screen_name = 'last_screen'
+    close_game = 'close_game'
+
     def __init__(self):
         self.const_reader = ConstantsReader()
         self.set_width()
@@ -88,7 +94,17 @@ class Constants:
     def get_yellow(self):
         return self.yellow
 
+    def get_main_screen_name(self):
+        return self.main_screen_name
 
-# иные:
-const = Constants()
-SCREEN = pygame.display.set_mode((const.get_width(), const.get_height()))
+    def get_levels_screen_name(self):
+        return self.levels_screen_name
+
+    def get_study_screen_name(self):
+        return self.study_screen_name
+
+    def get_close_game_name(self):
+        return self.close_game
+
+    def get_last_screen_name(self):
+        return self.last_screen_name
