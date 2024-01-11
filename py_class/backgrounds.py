@@ -11,3 +11,6 @@ class GameBackgrounds:
 
     def get_background_levels(self):
         return pygame.image.load("images/level.jpg")
+
+    def get_background_exit_game(self):
+        return "black"
