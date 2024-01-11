@@ -6,7 +6,7 @@ class ConstantsReader:
 
     def __init__(self):
         try:
-            with open('..\\data\\const1.txt', "r") as file:
+            with open('data\const.txt', "r") as file:
                 for line in file:
                     self.list_consts.append(line)
         except FileNotFoundError:
@@ -39,6 +39,9 @@ class Constants:
     study_screen_name = 'study'
     last_screen_name = 'last_screen'
     close_game = 'close_game'
+    level1_screen = 'level1'
+    level2_screen = 'level2'
+    about_us_screen = 'about_us'
 
     def __init__(self):
         self.const_reader = ConstantsReader()
@@ -108,3 +111,13 @@ class Constants:
 
     def get_last_screen_name(self):
         return self.last_screen_name
+
+    def get_level1_screen_name(self):
+        return self.level1_screen
+
+    def get_level2_screen_name(self):
+        return self.level2_screen
+
+    def get_about_us_screen_name(self):
+        return self.about_us_screen
+
