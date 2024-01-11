@@ -5,9 +5,9 @@ from .constants import WIDTH, HEIGHT
 
 class Player:
 
-    def __init__(self):
+    def __init__(self, speed):
         self.rect = pygame.Rect(WIDTH // 2 - 100, HEIGHT - 100, 100, 100)
-        self.speed = 5
+        self.speed = speed
         self.image = pygame.image.load('images/FL_images/player.png').convert_alpha()
         self.original_image = self.image.copy()
         self.direction = 'down'
