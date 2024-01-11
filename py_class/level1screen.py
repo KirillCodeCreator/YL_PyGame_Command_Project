@@ -174,7 +174,7 @@ class Level1Screen:
                 return self.const.get_levels_screen_name()
 
             if score >= 500:
-                show_game_win(score, "Поздравляем, Вы успешно прошли уровень 1")
+                show_game_win(score, "Поздравляем, Вы успешно прошли уровень 1", save=True)
                 score = 0
                 player_life = 100
                 bullet_counter = 100

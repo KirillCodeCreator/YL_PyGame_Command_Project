@@ -191,7 +191,7 @@ class StudyScreen:
                 meteor2_group.add(meteor2_object)
 
             if score >= 1000:
-                show_game_win(score, "Поздравляем, Вы успешно прошли обучение")
+                show_game_win(score, "Поздравляем, Вы успешно прошли обучение", save=False)
                 player.rect.topleft = player_position_first
                 bullets.empty()
                 bullet_refill_group.empty()
