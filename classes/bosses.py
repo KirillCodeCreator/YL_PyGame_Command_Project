@@ -1,8 +1,10 @@
-import pygame
-import random
 import math
+import random
 
-from .constants import WIDTH, HEIGHT
+import pygame
+
+from .bossbullet import Boss_Bullet
+from .constants import WIDTH
 
 
 class Boss(pygame.sprite.Sprite):
@@ -47,20 +49,3 @@ class Boss(pygame.sprite.Sprite):
 
             self.rect.x += direction.x * self.speed
             self.rect.y += direction.y * self.speed
-
-
-class Boss_Bullet(pygame.sprite.Sprite):
-
-    def __init__(self, x, y):
-        super().__init__()
-        self.image = pygame.image.load('images/TH_level/bullets/bulletboss.png').convert_alpha()
-        self.rect = self.image.get_rect()
-        self.rect.centerx = x
-        self.rect.bottom = y + 10
-        self.speed = 10
-
-    def update(self):
-        self.rect.move_ip(0, self.speed)
-
-        if self.rect.top > HEIGHT:
-            self.kill()
