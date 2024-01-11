@@ -336,16 +336,6 @@ class StudyScreen:
 
             self.clock.tick(FPS)
 
-    def create_return_button(self):
-        return Button(
-            image=None,
-            pos=(600, 650),
-            text_input="НАЗАД",
-            font=font_for_menu(75),
-            base_color="White",
-            hovering_color="Green",
-        )
-
     def get_screen_name(self):
         const = Constants()
         return const.get_study_screen_name()
