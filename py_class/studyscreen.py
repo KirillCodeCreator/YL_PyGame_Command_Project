@@ -12,7 +12,7 @@ from py_class.buttons_in_menu import Button
 from py_class.const import Constants
 from py_class.controls import move_player
 from py_class.font import font_for_menu
-from py_class.functions import show_game_over, show_game_win
+from py_class.functions import show_game_win
 
 
 class StudyScreen:
@@ -31,16 +31,11 @@ class StudyScreen:
         pygame.mixer.music.play(loops=-1)
 
     def init_screen(self):
-        pass
-        # backgrounds = GameBackgrounds()
         self.play_music_background()
-        # self.screen.blit(backgrounds.get_background_menu(), (0, 0))
-        # study_text = font_for_menu(55).render("тут надо запустить обучение", True, "White")
-        # study_rect = study_text.get_rect(center=(640, 75))
-        # self.screen.blit(study_text, study_rect)
 
     def run(self):
         print('Запустили уровень обучения')
+        pygame.display.set_caption('Уровень обучения')
         explosions = pygame.sprite.Group()
         bullets = pygame.sprite.Group()
         enemy1_group = pygame.sprite.Group()
@@ -195,24 +190,8 @@ class StudyScreen:
                 )
                 meteor2_group.add(meteor2_object)
 
-            if player_life <= 0:
-                show_game_over(score)
-                score = 0
-                player_life = 200
-                bullet_counter = 200
-                player.rect.topleft = player_position_first
-                bullets.empty()
-                bullet_refill_group.empty()
-                meteor2_group.empty()
-                enemy1_group.empty()
-                explosions.empty()
-                return self.const.get_about_us_screen_name()
-
             if score >= 1000:
-                show_game_win(score)
-                score = 0
-                player_life = 200
-                bullet_counter = 200
+                show_game_win(score, "Поздравляем, Вы успешно прошли обучение")
                 player.rect.topleft = player_position_first
                 bullets.empty()
                 bullet_refill_group.empty()

@@ -100,7 +100,7 @@ class LevelsScreen:
         pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
         self.screen.blit(backgrounds.get_background_levels(), (0, 0))
         exit_text = font_for_menu(55).render("Выберите, какой уровень вы хотите пройти?", True, "White")
-        exit_rect = exit_text.get_rect(center=(640, 75))
+        exit_rect = exit_text.get_rect(center=(620, 75))
         self.screen.blit(exit_text, exit_rect)
 
     def run(self):

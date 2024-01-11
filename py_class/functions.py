@@ -25,9 +25,9 @@ def show_game_over(score):
     pygame.time.delay(2500)
 
 
-def show_game_win(score):
+def show_game_win(score, message):
     font = pygame.font.SysFont('Impact', 50)
-    text = font.render("ВЫ ПРОШЛИ ОБУЧЕНИЕ!", True, (255, 255, 255))
+    text = font.render(message, True, (255, 255, 255))
     text_rect = text.get_rect(center=(WIDTH / 2, HEIGHT / 2 - 50))
     screen.blit(text, text_rect)
     pygame.display.flip()
