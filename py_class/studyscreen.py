@@ -69,7 +69,7 @@ class StudyScreen:
         # Константы под этот уровень.
         score = 0
         hi_score = 0
-        player = Player()
+        player = Player(5)
         player_life = 100
         bullet_counter = 100
 
