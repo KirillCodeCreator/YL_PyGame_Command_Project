@@ -16,8 +16,8 @@ class Level2Screen:
     def init_screen(self):
         pass
         backgrounds = GameBackgrounds()
-        #pygame.mixer.music.load("sounds/music_")
-        #pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
+        # pygame.mixer.music.load("sounds/music_")
+        # pygame.mixer.music.play(loops=-1, start=0.0, fade_ms=1)
         self.screen.blit(backgrounds.get_background_menu(), (0, 0))
         level_text = font_for_menu(55).render("Запустить Уровень 2", True, "White")
         level_rect = level_text.get_rect(center=(640, 75))

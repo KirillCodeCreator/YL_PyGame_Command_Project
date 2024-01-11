@@ -1,5 +1,6 @@
-import pygame
 import random
+
+import pygame
 
 from .constants import WIDTH, HEIGHT, ENEMY_FORCE
 

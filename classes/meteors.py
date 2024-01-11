@@ -1,6 +1,6 @@
 import pygame
 
-from .constants import WIDTH, HEIGHT
+from .constants import HEIGHT
 
 
 class Meteors(pygame.sprite.Sprite):

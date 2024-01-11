@@ -28,12 +28,12 @@ class AboutUsScreen:
         self.screen.blit(target_text, target_rect)
 
         target2_text = font_for_menu(30).render("Следует сбивать или уворачиваться от помех",
-                                               True, "White")
+                                                True, "White")
         target2_rect = target2_text.get_rect(center=(640, 350))
         self.screen.blit(target2_text, target2_rect)
 
-
-        button1_text = font_for_menu(30).render("Стрелки на клавиатуре - двигают самолет в соответсвующем направлении", True, "White")
+        button1_text = font_for_menu(30).render("Стрелки на клавиатуре - двигают самолет в соответсвующем направлении",
+                                                True, "White")
         button1_rect = button1_text.get_rect(center=(640, 400))
         self.screen.blit(button1_text, button1_rect)
 
@@ -41,7 +41,8 @@ class AboutUsScreen:
         button2_rect = button2_text.get_rect(center=(640, 450))
         self.screen.blit(button2_text, button2_rect)
 
-        button3_text = font_for_menu(30).render("Для завершения обучения набирайте требуемое количество очков", True, "White")
+        button3_text = font_for_menu(30).render("Для завершения обучения набирайте требуемое количество очков", True,
+                                                "White")
         button3_rect = button3_text.get_rect(center=(640, 500))
         self.screen.blit(button3_text, button3_rect)
 
@@ -90,7 +91,7 @@ class AboutUsScreen:
             base_color="Black",
             hovering_color="Green",
         )
+
     def get_screen_name(self):
         const = Constants()
         return const.get_about_us_screen_name()
-

@@ -7,7 +7,8 @@ from py_class.const import Constants
 from py_class.exitscreen import ExitScreen
 from py_class.level1screen import Level1Screen
 from py_class.level2screen import Level2Screen
-from py_class.mainscreen import MainScreen, LevelsScreen
+from py_class.levelsscreen import LevelsScreen
+from py_class.mainscreen import MainScreen
 from py_class.studyscreen import StudyScreen
 
 
@@ -29,6 +30,7 @@ def select_screen(screen, next_screen_name):
     else:
         return MainScreen(screen)
 
+
 if __name__ == '__main__':
     # инициализация Pygame:
     pygame.init()
@@ -43,7 +45,7 @@ if __name__ == '__main__':
     # запускаем цикл перехода по экранам
     while True:
         screen_cursor = select_screen(SCREEN, next_screen_name)
-        next_screen_name = screen_cursor.run()  #запускаем цикл обработки внутри выбранного экрана
+        next_screen_name = screen_cursor.run()  # запускаем цикл обработки внутри выбранного экрана
         if next_screen_name == const.get_close_game_name():
             break
 

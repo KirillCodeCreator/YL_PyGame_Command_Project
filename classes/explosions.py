@@ -1,5 +1,6 @@
-import pygame
 import random
+
+import pygame
 
 
 class Explosion(pygame.sprite.Sprite):
@@ -35,4 +36,3 @@ class Explosion(pygame.sprite.Sprite):
                 if not self.sound_played:
                     self.explosion_sound.play()
                     self.sound_played = True
-

@@ -28,7 +28,7 @@ def show_game_over(score):
     pygame.time.delay(2500)
 
 
-def show_game_win(score, message, save : bool):
+def show_game_win(score, message, save: bool):
     if save == True:
         scores = Scores()
         count = int(scores.get_scores_from_file())
