@@ -57,9 +57,9 @@ class StudyScreen:
         ]
 
         enemies = [
-            pygame.image.load("images/FL_images/enemy/enemy1_1.png").convert_alpha(),
-            pygame.image.load("images/FL_images/enemy/enemy1_2.png").convert_alpha(),
-            pygame.image.load("images/FL_images/enemy/enemy1_3.png").convert_alpha(),
+            pygame.image.load("images/FL_images/enemy/enemy1.png").convert_alpha(),
+            pygame.image.load("images/FL_images/enemy/enemy2.png").convert_alpha(),
+            pygame.image.load("images/FL_images/enemy/enemy3.png").convert_alpha(),
         ]
 
         stone_images_group = [
