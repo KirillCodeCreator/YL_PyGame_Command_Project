@@ -51,3 +51,15 @@ def show_game_win(score, message, save: bool):
     pygame.mixer.music.load('sounds/FL_sounds/win.mp3')
     pygame.mixer.music.play()
     pygame.time.delay(3000)
+
+def show_boss_game_win(score):
+    constants = Constants()
+    font = pygame.font.SysFont('Impact', 50)
+    text = font.render("ВЫ ПОБЕДИЛИ ФИНАЛЬНОГО БОССА!", True, (255, 255, 255))
+    text_rect = text.get_rect(center=(constants.get_width()/2, constants.get_height()/2))
+    screen.blit(text, text_rect)
+    pygame.display.flip()
+    pygame.mixer.music.load('sounds/FL_sounds/win.mp3')
+    pygame.mixer.music.play()
+    pygame.time.delay(1000)
+    music_background()
