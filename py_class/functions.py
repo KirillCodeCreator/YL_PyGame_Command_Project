@@ -69,5 +69,5 @@ def show_boss_game_win(score):
     pygame.display.flip()
     pygame.mixer.music.load('sounds/FL_sounds/win.mp3')
     pygame.mixer.music.play()
-    pygame.time.delay(1000)
+    pygame.time.delay(3000)
     music_background()
