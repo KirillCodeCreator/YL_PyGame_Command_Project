@@ -13,6 +13,7 @@ from py_class.studyscreen import StudyScreen
 
 # в этом методе выбираем экран
 def select_screen(screen, next_screen_name):
+    pygame.display.set_caption("К ЗВЁЗДАМ!")
     if next_screen_name == const.get_levels_screen_name():  # открываем экран для выбора уровней
         return LevelsScreen(screen)
     elif next_screen_name == const.get_level1_screen_name():  # открываем экран уровня 1
