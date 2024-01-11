@@ -41,7 +41,7 @@ class AboutUsScreen:
         button2_rect = button2_text.get_rect(center=(640, 450))
         self.screen.blit(button2_text, button2_rect)
 
-        button3_text = font_for_menu(30).render("Для завершения обучения или уровня игры следует набрать 1000 очков", True, "White")
+        button3_text = font_for_menu(30).render("Для завершения обучения набирайте требуемое количество очков", True, "White")
         button3_rect = button3_text.get_rect(center=(640, 500))
         self.screen.blit(button3_text, button3_rect)
 
