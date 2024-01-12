@@ -8,10 +8,8 @@ from classes.enemies import Enemy1
 from classes.explosions import Explosion
 from classes.meteors import Meteors
 from classes.player import Player
-from py_class.buttons_in_menu import Button
 from py_class.const import Constants
 from py_class.controls import move_player
-from py_class.font import font_for_menu
 from py_class.functions import show_game_win
 
 
