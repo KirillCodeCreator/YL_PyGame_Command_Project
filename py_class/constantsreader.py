@@ -3,7 +3,7 @@ class ConstantsReader:
 
     def __init__(self):
         try:
-            with open('data\const.txt', "r") as file:
+            with open('data/const.txt', "r") as file:
                 for line in file:
                     self.list_consts.append(line)
         except FileNotFoundError:
